@@ -1,8 +1,8 @@
 import csv
 
 def word_traker(prompt):
-    with open('dataset.csv', 'r') as csvfile:
-        reader = csv.reader(csvfile)
+    with open('dataset.csv', 'r', encoding='utf-8') as f:
+        reader = csv.reader(f)
         keyword = [row[0] for row in reader]
     
     prompt_words = prompt.split()
@@ -14,6 +14,6 @@ def word_traker(prompt):
     return False
 
 
-text  = "Place the text data herer" #if you are sing this for an app pass the text data here
+text= input("Place the text data herer") #if you are sing this for an app pass the text data here
 
 word_traker(text)
